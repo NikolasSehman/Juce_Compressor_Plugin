@@ -67,8 +67,13 @@ void FirstTestPluginAudioProcessorEditor::paint (juce::Graphics& g)
     g.setColour (juce::Colours::greenyellow);
     g.setFont (15.0f);
     //g.drawFittedText ("Wombatduke INC", getLocalBounds(), juce::Justification::centred, 1);
-    g.drawFittedText("Compressor", 400, 25, 100, 25, juce::Justification::centred, 1);
-   
+    g.drawFittedText("Compressor",  410,    25,     100, 25, juce::Justification::centred, 1);
+    g.drawFittedText("Threshold",   30,     75,    100, 25, juce::Justification::centred, 1);
+    g.drawFittedText("Ratio",       200,    140,    100, 25, juce::Justification::centred, 1);
+    g.drawFittedText("Attack",      380,    75,    100, 25, juce::Justification::centred, 1);
+    g.drawFittedText("Release",     560,    140,   100, 25, juce::Justification::centred, 1);
+    g.drawFittedText("MakeUp Gain", 730,    75,    100, 25, juce::Justification::centred, 1);
+}
 
 void FirstTestPluginAudioProcessorEditor::resized()
 {
