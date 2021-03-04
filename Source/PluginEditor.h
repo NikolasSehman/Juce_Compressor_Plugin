@@ -30,6 +30,10 @@ private:
     FirstTestPluginAudioProcessor& audioProcessor;
     
     Slider threshold;
+    Slider ratio;
+    Slider attack;
+    Slider release;
+    Slider makeupGain;
     
 
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (FirstTestPluginAudioProcessorEditor)
