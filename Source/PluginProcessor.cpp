@@ -134,6 +134,8 @@ void FirstTestPluginAudioProcessor::processBlock (juce::AudioBuffer<float>& buff
     juce::ScopedNoDenormals noDenormals;
     auto totalNumInputChannels  = getTotalNumInputChannels();
     auto totalNumOutputChannels = getTotalNumOutputChannels();
+    
+    threshold = 0.f;
 
     for (auto i = totalNumInputChannels; i < totalNumOutputChannels; ++i)
         buffer.clear (i, 0, buffer.getNumSamples());

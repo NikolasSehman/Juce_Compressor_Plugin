@@ -54,6 +54,12 @@ public:
     void setStateInformation (const void* data, int sizeInBytes) override;
     
     float hardClip(float x);
+    
+    float threshold = 0.f;
+    float ratio = 0.f;
+    float attack = 0.f;
+    float decay = 0.f;
+    float release = 0.f;
 
 private:
     //==============================================================================

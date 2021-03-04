@@ -15,7 +15,15 @@ FirstTestPluginAudioProcessorEditor::FirstTestPluginAudioProcessorEditor (FirstT
 {
     // Make sure that before the constructor has finished, you've set the
     // editor's size to whatever you need it to be.
-    setSize (400, 300);
+    setSize (800, 300);
+//
+   // threshold.addListener(this);
+        threshold.setBounds(100, 50, 125, 125);
+        threshold.setValue(audioProcessor.threshold);
+        threshold.setRange(10.f, 1000.f,1.f);
+        threshold.setTextBoxStyle(Slider::TextBoxBelow, false, 75, 25);
+        threshold.setSliderStyle(Slider::SliderStyle::RotaryHorizontalVerticalDrag);
+        addAndMakeVisible(threshold);
 }
 
 FirstTestPluginAudioProcessorEditor::~FirstTestPluginAudioProcessorEditor()
@@ -31,7 +39,8 @@ void FirstTestPluginAudioProcessorEditor::paint (juce::Graphics& g)
     g.setColour (juce::Colours::greenyellow);
     g.setFont (15.0f);
     //g.drawFittedText ("Wombatduke INC", getLocalBounds(), juce::Justification::centred, 1);
-    g.drawFittedText("Wombatduke", 50, 50, 100, 100, juce::Justification::centred, 1);
+    g.drawFittedText("Compressor", 400, 25, 100, 25, juce::Justification::centred, 1);
+    g.drawFittedText("Threshold", 50, 100, 100, 25, juce::Justification::centred, 1);
 }
 
 void FirstTestPluginAudioProcessorEditor::resized()
